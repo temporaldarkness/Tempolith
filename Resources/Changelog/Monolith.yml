@@ -21054,3 +21054,10 @@ Entries:
   id: 2322
   time: '2026-05-16T01:08:52.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/4001
+- author: Mapleflavoureds
+  changes:
+    - type: Tweak
+      message: Asteroids no longer produce infection anomalies
+  id: 2323
+  time: '2026-05-16T01:10:29.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4000

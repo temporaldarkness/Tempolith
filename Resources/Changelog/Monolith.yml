@@ -21097,3 +21097,10 @@ Entries:
   id: 2325
   time: '2026-05-16T14:06:41.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/3918
+- author: IronmoonHeathen
+  changes:
+    - type: Add
+      message: 'TSFMC High Command has issued two new set of standard headwear. '
+  id: 2326
+  time: '2026-05-16T14:55:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4006

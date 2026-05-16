@@ -21033,3 +21033,10 @@ Entries:
   id: 2319
   time: '2026-05-16T00:59:39.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/3956
+- author: Corrupt142
+  changes:
+    - type: Tweak
+      message: 'Rebalanced almost every Energy/mining shipgun:'
+  id: 2320
+  time: '2026-05-16T01:03:44.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/3998

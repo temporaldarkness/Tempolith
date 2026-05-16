@@ -21124,3 +21124,10 @@ Entries:
   id: 2328
   time: '2026-05-16T15:06:07.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/3903
+- author: Corrupt142
+  changes:
+    - type: Fix
+      message: Fixed mining pulser not working
+  id: 2329
+  time: '2026-05-16T20:08:28.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4011

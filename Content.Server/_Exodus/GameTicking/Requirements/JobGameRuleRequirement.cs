@@ -4,8 +4,8 @@ using Content.Shared._Exodus.GameTicking.Requirements;
 using Content.Server._NF.CryoSleep;
 using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
-using Content.Server.Mind;
 using Content.Shared.Mobs.Systems;
+using Robust.Server.Player;
 
 namespace Content.Server._Exodus.GameTicking.Requirements;
 
@@ -22,8 +22,8 @@ public sealed partial class JobGameRuleRequirement : GameRuleRequirement
         if (!prototype.TryIndex(Department, out var department))
             return true;
 
-        var mindSystem = entity.System<MindSystem>();
         var mobSystem = entity.System<MobStateSystem>();
+        var playerManager = IoCManager.Resolve<IPlayerManager>(); // TODO: remove this crutch next refactor
 
         var players = entity.EntityQueryEnumerator<PlayerJobComponent>();
         var jobCounter = 0;
@@ -38,7 +38,7 @@ public sealed partial class JobGameRuleRequirement : GameRuleRequirement
                 continue;
 
             // mob checks
-            if (!mindSystem.TryGetMind(uid, out _, out var mind) || mind.Session == null)
+            if (!playerManager.TryGetSessionByEntity(uid, out _))
                 continue;
 
             if (mobSystem.IsIncapacitated(uid))

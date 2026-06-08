@@ -21451,3 +21451,19 @@ Entries:
   id: 2365
   time: '2026-06-08T09:33:52.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/4078
+- author: kasature90
+  changes:
+    - type: Add
+      message: >-
+        Added Iroh as a cool Merc/CC rifle. Basically a space G36. Make at a
+        lathe after researching, find in exped ranged weapon spawns, or equip in
+        loadout for $100k (as merc; free for CC).
+    - type: Tweak
+      message: >-
+        Replaced AKM, Lecter, Vulcan, and Drozd for Judges with Iroh (w/
+        roundstart 2x optic & VFG).
+    - type: Tweak
+      message: Weapon cases can now store attachments.
+  id: 2366
+  time: '2026-06-08T09:42:19.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4050

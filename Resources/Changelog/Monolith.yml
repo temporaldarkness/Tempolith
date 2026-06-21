@@ -21638,3 +21638,10 @@ Entries:
   id: 2385
   time: '2026-06-21T16:39:03.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/4002
+- author: The-Aisen
+  changes:
+    - type: Tweak
+      message: Replaced the IHR Victoria with the NOV Victoria
+  id: 2386
+  time: '2026-06-21T16:46:37.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/3991

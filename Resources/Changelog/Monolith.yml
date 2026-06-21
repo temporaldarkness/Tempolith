@@ -21652,3 +21652,10 @@ Entries:
   id: 2387
   time: '2026-06-21T16:58:42.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/3921
+- author: Mrrpip
+  changes:
+    - type: Tweak
+      message: Allows syndicate and cultist NPCs to drop organs when gibbed.
+  id: 2388
+  time: '2026-06-21T17:00:14.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/3909

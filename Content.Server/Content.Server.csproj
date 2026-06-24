@@ -7,8 +7,6 @@
     <NoWarn>1998</NoWarn>
     <WarningsAsErrors>RA0032;nullable</WarningsAsErrors>
     <ServerGarbageCollection>true</ServerGarbageCollection>
-    <Features>Interceptors</Features>
-    <InterceptorsNamespaces>$(InterceptorsNamespaces);Content.Server</InterceptorsNamespaces>
   </PropertyGroup>
   <Import Project="../MSBuild/Content.props" />
   <ItemGroup>

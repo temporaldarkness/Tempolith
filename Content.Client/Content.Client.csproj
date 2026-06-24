@@ -4,6 +4,8 @@
     <OutputPath>..\bin\Content.Client\</OutputPath>
     <OutputType Condition="'$(FullRelease)' != 'True'">Exe</OutputType>
     <WarningsAsErrors>RA0032;nullable</WarningsAsErrors>
+    <Features>Interceptors</Features>
+    <InterceptorsNamespaces>$(InterceptorsNamespaces);Content.Client</InterceptorsNamespaces>
   </PropertyGroup>
   <Import Project="../MSBuild/Content.props" />
   <ItemGroup>

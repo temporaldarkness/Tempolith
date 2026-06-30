@@ -21967,3 +21967,16 @@ Entries:
   id: 2426
   time: '2026-06-30T08:17:57.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/4093
+- author: kasature90
+  changes:
+    - type: Add
+      message: >-
+        Added 2 new superheavy shipweapons for ballistics. Not mapped anywhere
+        currently.
+    - type: Tweak
+      message: Changed AK570 sprite for a 5th time.
+    - type: Fix
+      message: Fixed ship weapons not having their intended muzzle flashes.
+  id: 2427
+  time: '2026-06-30T09:51:34.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4161

@@ -4,13 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/Capitals/flyssa.yml
   time: 04/16/2026 13:15:13
   entityCount: 3238
-========
-  time: 03/01/2026 01:38:58
-  entityCount: 3273
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/Capitals/flyssa.yml
 maps: []
 grids:
 - 1
@@ -151,7 +146,7 @@ entities:
         Kudzu: []
         Puddle: []
     - type: Shuttle
-      dampingModifier: 0.30
+      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -2337,7 +2332,7 @@ entities:
     - type: Transform
       pos: -0.5,36.5
       parent: 1
-- proto: APCBasic
+- proto: APCHyperCapacity
   entities:
   - uid: 135
     components:
@@ -3721,42 +3716,6 @@ entities:
     components:
     - type: Transform
       pos: 0.6381216,34.762974
-      parent: 1
-- proto: BroadswordCentralElectronics
-  entities:
-  - uid: 2740
-    components:
-    - type: Transform
-      pos: -5.535013,4.594722
-      parent: 1
-  - uid: 2913
-    components:
-    - type: Transform
-      pos: 4.3805323,4.6941795
-      parent: 1
-- proto: BroadswordPeripheralsElectronics
-  entities:
-  - uid: 2972
-    components:
-    - type: Transform
-      pos: -5.3778667,4.450056
-      parent: 1
-  - uid: 3269
-    components:
-    - type: Transform
-      pos: 4.4890594,4.540472
-      parent: 1
-- proto: BroadswordTargetingElectronics
-  entities:
-  - uid: 3270
-    components:
-    - type: Transform
-      pos: -5.3778667,4.6941795
-      parent: 1
-  - uid: 3271
-    components:
-    - type: Transform
-      pos: 4.5433235,4.8388453
       parent: 1
 - proto: ButtonFrameCaution
   entities:
@@ -8854,7 +8813,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/Capitals/flyssa.yml
 - proto: ComputerCriminalRecords
   entities:
   - uid: 1397
@@ -8867,8 +8825,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-========
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/Capitals/flyssa.yml
 - proto: ComputerEliteRadar
   entities:
   - uid: 1399
@@ -8905,24 +8861,15 @@ entities:
       startingCharge: 0
 - proto: ComputerIFF
   entities:
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/Capitals/flyssa.yml
   - uid: 1400
     components:
     - type: Transform
       pos: 4.5,21.5
-========
-  - uid: 1069
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 0.5,21.5
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/Capitals/flyssa.yml
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/Capitals/flyssa.yml
 - proto: ComputerPowerMonitoring
   entities:
   - uid: 819
@@ -8944,9 +8891,6 @@ entities:
     - type: Battery
       startingCharge: 0
 - proto: ComputerShuttle
-========
-- proto: ComputerShuttleTSFNVWS
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/Capitals/flyssa.yml
   entities:
   - uid: 1402
     components:
@@ -8959,15 +8903,11 @@ entities:
       startingCharge: 0
 - proto: ComputerStationRecords
   entities:
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/Capitals/flyssa.yml
   - uid: 1403
-========
-  - uid: 1064
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/Capitals/flyssa.yml
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,15.5
+      rot: 1.5707963267948966 rad
+      pos: 0.5,21.5
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
@@ -13692,20 +13632,6 @@ entities:
     - type: Transform
       pos: -10.5,13.5
       parent: 1
-- proto: HalberdChassis
-  entities:
-  - uid: 2472
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 3.5367937,3.5911055
-      parent: 1
-  - uid: 2733
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -4.46783,3.6001468
-      parent: 1
 - proto: HarmonicaInstrument
   entities:
   - uid: 1996
@@ -14008,18 +13934,6 @@ entities:
     components:
     - type: Transform
       pos: -4.809992,34.712753
-      parent: 1
-- proto: MechIFFTSF
-  entities:
-  - uid: 3272
-    components:
-    - type: Transform
-      pos: -4.7948103,4.6670547
-      parent: 1
-  - uid: 3273
-    components:
-    - type: Transform
-      pos: 3.9506679,4.7484293
       parent: 1
 - proto: MedicalBed
   entities:
@@ -20631,7 +20545,7 @@ entities:
     - type: Transform
       pos: -10.5,24.5
       parent: 1
-- proto: WallPlastitanium
+- proto: WallPlastitaniumIndestructible
   entities:
   - uid: 3188
     components:
@@ -20776,7 +20690,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -13.5,17.5
       parent: 1
-- proto: WeaponTurretDymere
+- proto: WeaponTurretHades
   entities:
   - uid: 3210
     components:
@@ -20784,19 +20698,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -8.5,30.5
       parent: 1
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/Capitals/flyssa.yml
   - uid: 3211
-========
-  - uid: 2335
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 7.5,30.5
-      parent: 1
-- proto: WeaponTurretHades
-  entities:
-  - uid: 2333
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/Capitals/flyssa.yml
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -20808,15 +20710,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: -4.5,49.5
       parent: 1
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/Capitals/flyssa.yml
   - uid: 3213
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 7.5,30.5
       parent: 1
-========
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/Capitals/flyssa.yml
 - proto: WeaponTurretHeavyTSFMC
   entities:
   - uid: 3214
@@ -20827,17 +20726,7 @@ entities:
       parent: 1
 - proto: WeaponTurretL85Autocannon
   entities:
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/Capitals/flyssa.yml
   - uid: 3215
-========
-  - uid: 1167
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -10.5,25.5
-      parent: 1
-  - uid: 2336
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/Capitals/flyssa.yml
     components:
     - type: Transform
       pos: 2.5,-4.5
@@ -20847,7 +20736,6 @@ entities:
     - type: Transform
       pos: -3.5,-4.5
       parent: 1
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/Capitals/flyssa.yml
   - uid: 3217
     components:
     - type: Transform
@@ -20855,27 +20743,10 @@ entities:
       pos: -10.5,25.5
       parent: 1
   - uid: 3218
-========
-  - uid: 2350
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/Capitals/flyssa.yml
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 9.5,25.5
-      parent: 1
-- proto: WeaponTurretScylla
-  entities:
-  - uid: 2351
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -2.5,59.5
-      parent: 1
-  - uid: 2440
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,59.5
       parent: 1
 - proto: WeaponTurretType54
   entities:
@@ -20941,7 +20812,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -22.5,9.5
       parent: 1
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/Capitals/flyssa.yml
 - proto: WeaponTurretVespera
   entities:
   - uid: 3229
@@ -20956,8 +20826,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 1.5,59.5
       parent: 1
-========
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/Capitals/flyssa.yml
 - proto: WindoorSecure
   entities:
   - uid: 3231

@@ -1944,7 +1944,7 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: ComputerShuttleKPV63RWR
+- proto: ComputerShuttle
   entities:
   - uid: 236
     components:
@@ -3017,7 +3017,6 @@ entities:
     - type: Transform
       pos: 0.5,3.5
       parent: 1
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/USSP/drakon.yml
 - proto: SpawnPointUSSPCorporal
   entities:
   - uid: 375
@@ -3026,9 +3025,6 @@ entities:
       pos: 0.5,3.5
       parent: 1
 - proto: SpawnPointUSSPMedic
-========
-- proto: SpawnPointUSSPRifleman
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/USSP/drakon.yml
   entities:
   - uid: 376
     components:

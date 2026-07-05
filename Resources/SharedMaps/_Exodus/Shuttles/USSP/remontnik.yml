@@ -1035,7 +1035,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,15.5
       parent: 1
-- proto: APCBasic
+- proto: APCHighCapacity
   entities:
   - uid: 53
     components:
@@ -4033,7 +4033,7 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: ComputerShuttleKPV63RWR
+- proto: ComputerShuttle
   entities:
   - uid: 611
     components:
@@ -6528,7 +6528,6 @@ entities:
     - type: Transform
       pos: 0.5,2.5
       parent: 1
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/USSP/remontnik.yml
 - proto: SpawnPointUSSPCorporal
   entities:
   - uid: 936
@@ -6563,8 +6562,6 @@ entities:
     - type: Transform
       pos: 0.5,14.5
       parent: 1
-========
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/USSP/remontnik.yml
 - proto: SpawnPointUSSPRifleman
   entities:
   - uid: 942

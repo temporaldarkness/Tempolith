@@ -6396,7 +6396,6 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-<<<<<<<< HEAD:Resources/Maps/_Exodus/Shuttles/USSP/buran.yml
 - proto: ComputerPowerMonitoring
   entities:
   - uid: 936
@@ -6409,9 +6408,6 @@ entities:
     - type: Battery
       startingCharge: 0
 - proto: ComputerShuttle
-========
-- proto: ComputerShuttleKPV63RWR
->>>>>>>> a17c316321d1d9f9f56d7c34957f45813d3a11ae:Resources/SharedMaps/_Mono/Shuttles/USSP/buran.yml
   entities:
   - uid: 937
     components:

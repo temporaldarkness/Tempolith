@@ -135,7 +135,7 @@
   cost: 10000
   recipeUnlocks:
   - BasicBorgCombatModuleTSF
-  - BorgIFFTSF
+  - CyborgEndoskeletonTSF # Exodus faction-borg-endoskeletons
   technologyPrerequisites:
   - UniversalMaterialResearchT1
   position: 12, -4

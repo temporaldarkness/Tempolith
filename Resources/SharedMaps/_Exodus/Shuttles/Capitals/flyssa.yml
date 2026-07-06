@@ -20552,7 +20552,7 @@ entities:
     - type: Transform
       pos: -10.5,24.5
       parent: 1
-- proto: WallPlastitaniumIndestructible
+- proto: WallPlastitaniumCapital
   entities:
   - uid: 3188
     components:

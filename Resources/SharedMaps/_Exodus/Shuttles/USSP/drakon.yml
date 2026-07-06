@@ -3017,20 +3017,6 @@ entities:
     - type: Transform
       pos: 0.5,3.5
       parent: 1
-- proto: SpawnPointUSSPCorporal
-  entities:
-  - uid: 375
-    components:
-    - type: Transform
-      pos: 0.5,3.5
-      parent: 1
-- proto: SpawnPointUSSPMedic
-  entities:
-  - uid: 376
-    components:
-    - type: Transform
-      pos: 0.5,3.5
-      parent: 1
 - proto: SpawnPointUSSPRifleman
   entities:
   - uid: 377

@@ -1,2 +1,0 @@
-frontier-lobby-camelot-subtext = An abandoned station, formerly held by the USSP.
-frontier-lobby-camelot-description = This is NOT a safezone. Not recommended for new players. Expedition and standard shipyards are available. Select USSP as your company in the lobby.

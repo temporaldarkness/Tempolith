@@ -12,7 +12,8 @@
   price: 61440
   category: Small
   group: Viper
-  access: Viper
+  access: Mercenary # Exodus temp-viper-mercenary-access
+  # access: Viper # Exodus temp-viper-mercenary-access
   shuttlePath: /SharedMaps/_Mono/Shuttles/Viper/reaver.yml
   guidebookPage: Null
   class:

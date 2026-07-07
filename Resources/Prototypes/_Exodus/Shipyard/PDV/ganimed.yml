@@ -8,7 +8,7 @@
   category: Medium
   group: BlackMarket
   access: Pirate
-  shuttlePath: /Maps/_Exodus/Shuttles/PDV/ganimed.yml
+  shuttlePath: /SharedMaps/_Exodus/Shuttles/PDV/ganimed.yml
   guidebookPage: Null
   class:
   - Pirate
@@ -20,7 +20,7 @@
 - type: gameMap
   id: Ganimed
   mapName: 'Ганимед'
-  mapPath: /Maps/_Exodus/Shuttles/PDV/ganimed.yml
+  mapPath: /SharedMaps/_Exodus/Shuttles/PDV/ganimed.yml
   minPlayers: 0
   stations:
     Ganimed:

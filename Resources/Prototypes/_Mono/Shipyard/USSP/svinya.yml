@@ -13,7 +13,8 @@
   price: 39000 # appraised at ~33200
   category: Small
   group: Ussp
-  access: USSP
+  access: Mercenary # Exodus temp-ussp-mercenary-access
+  # access: USSP # Exodus temp-ussp-mercenary-access
   shuttlePath: /SharedMaps/_Mono/Shuttles/USSP/svinya.yml
   guidebookPage: Null
   class:

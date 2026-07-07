@@ -8,7 +8,8 @@
   price: 85290
   category: Medium
   group: Ussp
-  access: USSP
+  access: Mercenary # Exodus temp-ussp-mercenary-access
+  # access: USSP # Exodus temp-ussp-mercenary-access
   shuttlePath: /SharedMaps/_Exodus/Shuttles/USSP/drakon.yml # Exodus
   guidebookPage: Null
   class:

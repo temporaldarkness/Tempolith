@@ -8,7 +8,8 @@
   purchasable: false # voucher only
   category: Small
   group: Custom
-  access: USSP
+  access: Mercenary # Exodus temp-ussp-mercenary-access
+  # access: USSP # Exodus temp-ussp-mercenary-access
   shuttlePath: /SharedMaps/_Mono/Shuttles/USSP/Ledokol/Attachments/kupol.yml
   guidebookPage: Null
 

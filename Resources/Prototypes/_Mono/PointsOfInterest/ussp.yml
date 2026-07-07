@@ -48,16 +48,18 @@
           lobbySortOrder: 4
         - type: StationJobs
           availableJobs:
-            USSPCommissar: [1, 1]
-            USSPSergeant: [4, 4]
-            USSPRifleman: [-1, -1]
-            VGCommander: [1, 1]
-            VGLieutenant: [2, 2]
-            VGInfanteer: [-1, -1]
+            # Exodus-begin disable-ussp-faction
+            # USSPCommissar: [1, 1]
+            # USSPSergeant: [4, 4]
+            # USSPRifleman: [-1, -1]
+            # VGCommander: [1, 1]
+            # VGLieutenant: [2, 2]
+            # VGInfanteer: [-1, -1]
+            # Exodus-end
             Contractor: [-1, -1]
             Pilot: [0, -1]
             Mercenary: [0, -1]
-          tags:
-          - USSPCommand
+          # tags: # Exodus disable-ussp-faction
+          # - USSPCommand
         - type: StationDeadDrop
           maxDeadDrops: 2 # Fewer here, players start here.

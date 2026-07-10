@@ -100,7 +100,10 @@ public sealed partial class SpeciesPrototype : IPrototype
     public SpeciesNaming Naming { get; private set; } = SpeciesNaming.FirstLast;
 
     [DataField]
-    public List<Sex> Sexes { get; private set; } = new() { Sex.Male, Sex.Female };
+    public List<Sex> Sexes { get; private set; } = new() { Sex.Male, Sex.Female, Sex.Futanari, Sex.Unsexed };
+
+    [DataField]
+    public List<Sex> ExcludeFromRandomSexes { get; private set; } = new() { Sex.Futanari };
 
     /// <summary>
     ///     Characters younger than this are too young to be hired by Nanotrasen.
@@ -126,6 +129,63 @@ public sealed partial class SpeciesPrototype : IPrototype
     /// </summary>
     [DataField]
     public int MaxAge = 120;
+
+    /// <summary>
+    ///     Characters must not crumple under earth-like gravity.
+    /// </summary>
+    [DataField]
+    public float MinWidth = 0.95f;
+
+    /// <summary>
+    ///     Characters must not exhibit a measurable gravitational pull on nearby objects.
+    /// </summary>
+    [DataField]
+    public float MaxWidth = 1.1f;
+
+    /// <summary>
+    ///     The normal width for this species.
+    /// </summary>
+    [DataField]
+    public float DefaultWidth = 1f;
+
+    /// <summary>
+    ///     Sentient microbial lifeforms are not currently hireable under contract.
+    /// </summary>
+    [DataField]
+    public float MinHeight = 0.9f;
+
+    /// <summary>
+    ///     You cannot fit in our cloning pods.
+    /// </summary>
+    [DataField]
+    public float MaxHeight = 1.1f;
+
+    /// <summary>
+    ///     The normal height for this species.
+    /// </summary>
+    [DataField]
+    public float DefaultHeight = 1f;
+
+    /// <summary>
+    ///     The min and max height of this species in SS14 in cm
+    /// </summary>
+    [DataField]
+    public float MinHeightCm = 150f;
+
+    [DataField]
+    public float MaxHeightCm = 200f;
+
+    /// <summary>
+    ///     The weight of this species in KG if it were 1x tall and 1x wide
+    /// </summary>
+    [DataField]
+    public int StandardWeight = 75;
+
+    /// <summary>
+    ///     How much this species' weight increases or decreases depending on unit size, measured in KG/units^2
+    /// </summary>
+    [DataField]
+    public int StandardDensity = 120;
 }
 
 public enum SpeciesNaming : byte

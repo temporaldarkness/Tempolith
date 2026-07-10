@@ -4,6 +4,7 @@
   id: BaseMobTajaran
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: Hunger
     baseDecayRate: 0.02083333332 # 25% more than default #Mono its not actually 25% but about 15.74%, 0.0225 would be 25% more than base
   - type: Thirst
@@ -38,11 +39,11 @@
     spawned:
     - id: FoodMeatHuman
       amount: 5
-  # Exodus-Change-Start    
-  #- type: NightVision 
+  # Exodus-Change-Start
+  #- type: NightVision
   #  activateSound: null
   #  deactivateSound: null
-  # Exodus-Change-End 
+  # Exodus-Change-End
   - type: MeleeWeapon
     soundHit:
       collection: Punch

@@ -313,6 +313,9 @@ binds:
 - function: FlipObject
   type: State
   key: F
+- function: Interact
+  type: State
+  key: U
 - function: TextCursorLeft
   type: State
   key: Left

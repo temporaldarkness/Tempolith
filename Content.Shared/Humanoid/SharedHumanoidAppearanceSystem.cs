@@ -52,6 +52,7 @@ public abstract partial class SharedHumanoidAppearanceSystem : EntitySystem
     {
         {Sex.Male, "father_grigori"},
         {Sex.Female, "neco"},
+        {Sex.Futanari, "neco"},
         {Sex.Unsexed, "adventure_core"},
     };
     // Corvax-TTS-End
@@ -172,6 +173,8 @@ public abstract partial class SharedHumanoidAppearanceSystem : EntitySystem
         targetHumanoid.SkinColor = sourceHumanoid.SkinColor;
         targetHumanoid.EyeColor = sourceHumanoid.EyeColor;
         targetHumanoid.Age = sourceHumanoid.Age;
+        targetHumanoid.Width = sourceHumanoid.Width;
+        targetHumanoid.Height = sourceHumanoid.Height;
         SetSex(target, sourceHumanoid.Sex, false, targetHumanoid);
         targetHumanoid.CustomBaseLayers = new(sourceHumanoid.CustomBaseLayers);
         targetHumanoid.MarkingSet = new(sourceHumanoid.MarkingSet);
@@ -466,6 +469,8 @@ public abstract partial class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         humanoid.Age = profile.Age;
+        humanoid.Width = profile.Appearance.Width;
+        humanoid.Height = profile.Appearance.Height;
 
         RaiseLocalEvent(uid, new ProfileLoadFinishedEvent()); // Shitmed Change
         Dirty(uid, humanoid);

@@ -337,6 +337,8 @@ namespace Content.Server.Database
         [Column("char_name")] public string CharacterName { get; set; } = null!;
         public string FlavorText { get; set; } = null!;
         public int Age { get; set; }
+        public float Width { get; set; } = 1f;
+        public float Height { get; set; } = 1f;
         public int BankBalance { get; set; }
         public string Sex { get; set; } = null!;
         public string Gender { get; set; } = null!;
@@ -349,10 +351,6 @@ namespace Content.Server.Database
         public string FacialHairColor { get; set; } = null!;
         public string EyeColor { get; set; } = null!;
         public string SkinColor { get; set; } = null!;
-        [Obsolete("Removed by Exodus | Isn't removed due to DB migration")]
-        public float Height { get; set; } = 1.0f;
-        [Obsolete("Removed by Exodus | Isn't removed due to DB migration")]
-        public float Width { get; set; } = 1.0f;
         public int SpawnPriority { get; set; } = 0;
         public List<Job> Jobs { get; } = new();
         public List<Antag> Antags { get; } = new();
@@ -366,6 +364,19 @@ namespace Content.Server.Database
 
         public int PreferenceId { get; set; }
         public Preference Preference { get; set; } = null!;
+
+        public ProfileErp? ErpData { get; set; }
+    }
+
+    public class ProfileErp
+    {
+        public int Id { get; set; }
+        public int ProfileId { get; set; }
+        public Profile Profile { get; set; } = null!;
+
+        public string Erp { get; set; } = null!; // Lust-ERP
+        public string Virginity { get; set; } = null!; // Lust-ERP
+        public string AnalVirginity { get; set; } = null!; // Lust-ERP
     }
 
     public class Job

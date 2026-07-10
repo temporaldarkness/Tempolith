@@ -1,2 +1,2 @@
-names-military-first-high-rank-dataset-1 = Commodore
-names-military-first-high-rank-dataset-2 = Brigadier General
+names-military-first-high-rank-dataset-1 = Коммодор
+names-military-first-high-rank-dataset-2 = Генерал-Бригадир

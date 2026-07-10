@@ -97,10 +97,16 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobChitinidHeadFutanari
+  baseSprite:
+    sprite: _DV/Mobs/Species/Chitinid/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobChitinidTorso
   baseSprite:
     sprite: _DV/Mobs/Species/Chitinid/parts.rsi
-    state: torso_m
+    state: torso_u
 
 - type: humanoidBaseSprite
   id: MobChitinidTorsoMale
@@ -113,6 +119,12 @@
   baseSprite:
     sprite: _DV/Mobs/Species/Chitinid/parts.rsi
     state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobChitinidTorsoFutanari
+  baseSprite:
+    sprite: _DV/Mobs/Species/Chitinid/parts.rsi
+    state: torso_h
 
 - type: humanoidBaseSprite
   id: MobChitinidLLeg

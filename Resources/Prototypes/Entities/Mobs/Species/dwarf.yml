@@ -5,6 +5,7 @@
   id: BaseMobDwarf
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: Hunger
   - type: Thirst
   - type: Carriable # Carrying system from nyanotrasen.

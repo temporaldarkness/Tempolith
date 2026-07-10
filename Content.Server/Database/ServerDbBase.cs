@@ -52,6 +52,7 @@ namespace Content.Server.Database
                 .Include(p => p.Profiles).ThenInclude(h => h.Jobs)
                 .Include(p => p.Profiles).ThenInclude(h => h.Antags)
                 .Include(p => p.Profiles).ThenInclude(h => h.Traits)
+                .Include(p => p.Profiles).ThenInclude(h => h.ErpData)
                 .Include(p => p.Profiles)
                     .ThenInclude(h => h.Loadouts)
                     .ThenInclude(l => l.Groups)
@@ -107,6 +108,7 @@ namespace Content.Server.Database
                 .Include(p => p.Loadouts)
                     .ThenInclude(l => l.Groups)
                     .ThenInclude(group => group.Loadouts)
+                .Include(p => p.ErpData)
                 .AsSplitQuery()
                 .SingleOrDefault(h => h.Slot == slot);
 
@@ -200,6 +202,21 @@ namespace Content.Server.Database
 
             var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
 
+            var erp = Erp.Ask;
+            var virginity = Virginity.No;
+            var analVirginity = Virginity.Yes;
+            if (profile.ErpData != null)
+            {
+                if (Enum.TryParse<Erp>(profile.ErpData.Erp, true, out var erpVal))
+                    erp = erpVal;
+
+                if (Enum.TryParse<Virginity>(profile.ErpData.Virginity, true, out var virginityVal))
+                    virginity = virginityVal;
+
+                if (Enum.TryParse<Virginity>(profile.ErpData.AnalVirginity, true, out var analVirginityVal))
+                    analVirginity = analVirginityVal;
+            }
+
             var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
             if (Enum.TryParse<Gender>(profile.Gender, true, out var genderVal))
                 gender = genderVal;
@@ -265,6 +282,9 @@ namespace Content.Server.Database
                 voice, // Corvax-TTS
                 profile.Age,
                 sex,
+                erp,
+                virginity,
+                analVirginity,
                 gender,
                 balance,
                 new HumanoidCharacterAppearance
@@ -275,7 +295,9 @@ namespace Content.Server.Database
                     Color.FromHex(profile.FacialHairColor),
                     Color.FromHex(profile.EyeColor),
                     Color.FromHex(profile.SkinColor),
-                    markings
+                    markings,
+                    profile.Width,
+                    profile.Height
                 ),
                 spawnPriority,
                 jobs,
@@ -302,8 +324,22 @@ namespace Content.Server.Database
             profile.Species = humanoid.Species;
             profile.Voice = humanoid.Voice; // Corvax-TTS
             profile.Age = humanoid.Age;
+            profile.Width = appearance.Width;
+            profile.Height = appearance.Height;
             profile.Sex = humanoid.Sex.ToString();
             profile.Gender = humanoid.Gender.ToString();
+
+            if (profile.ErpData == null)
+            {
+                profile.ErpData = new ProfileErp
+                {
+                    ProfileId = profile.Id,
+                    Profile = profile
+                };
+            }
+            profile.ErpData.Erp = humanoid.Erp.ToString();
+            profile.ErpData.Virginity = humanoid.Virginity.ToString();
+            profile.ErpData.AnalVirginity = humanoid.AnalVirginity.ToString();
             profile.BankBalance = humanoid.BankBalance;
             profile.HairName = appearance.HairStyleId;
             profile.HairColor = appearance.HairColor.ToHex();

@@ -102,6 +102,8 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction TargetRightFoot = "TargetRightFoot";
         // Shitmed Change End
 
+        public static readonly BoundKeyFunction Interact = "Interact"; // Interaction Panel Edit
+
         public static readonly BoundKeyFunction ArcadeUp = "ArcadeUp";
         public static readonly BoundKeyFunction ArcadeDown = "ArcadeDown";
         public static readonly BoundKeyFunction ArcadeLeft = "ArcadeLeft";

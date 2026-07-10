@@ -16,9 +16,10 @@
   femaleFirstNames: NamesHydrakinUnisex # Exodus-hydrakin-names
   naming: First
   sexes:
-  - Unsexed
   - Male
   - Female
+  - Futanari
+  - Unsexed
 
 - type: speciesBaseSprites
   id: MobHydrakinSprites
@@ -112,6 +113,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobHydrakinHeadFutanari
+  baseSprite:
+    sprite: _Obelisk/Mobs/Species/Hydrakin/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobHydrakinTorso
   baseSprite:
     sprite: _Obelisk/Mobs/Species/Hydrakin/parts.rsi
@@ -125,6 +132,12 @@
 
 - type: humanoidBaseSprite
   id: MobHydrakinTorsoFemale
+  baseSprite:
+    sprite: _Obelisk/Mobs/Species/Hydrakin/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobHydrakinTorsoFutanari
   baseSprite:
     sprite: _Obelisk/Mobs/Species/Hydrakin/parts.rsi
     state: torso_f

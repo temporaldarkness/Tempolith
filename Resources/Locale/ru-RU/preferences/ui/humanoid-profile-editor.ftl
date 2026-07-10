@@ -7,7 +7,8 @@ humanoid-profile-editor-clothing-show = Переключить
 humanoid-profile-editor-sex-label = Пол:
 humanoid-profile-editor-sex-male-text = Мужской
 humanoid-profile-editor-sex-female-text = Женский
-humanoid-profile-editor-sex-unsexed-text = Отсутствует
+humanoid-profile-editor-sex-futanari-text = Футанари
+humanoid-profile-editor-sex-unsexed-text = Бесполый
 humanoid-profile-editor-age-label = Возраст:
 humanoid-profile-editor-skin-color-label = Цвет кожи:
 humanoid-profile-editor-species-label = Раса:
@@ -62,6 +63,9 @@ humanoid-profile-editor-mindset-evil-text = Злой
 humanoid-profile-editor-mindset-chaoticallykind-text = Хаотично-добрый
 humanoid-profile-editor-mindset-chaotic-text = Хаотичный
 humanoid-profile-editor-mindset-chaoticallyangry-text = Хаотично-злой
+humanoid-profile-editor-height-label = Рост: { $height }см
+humanoid-profile-editor-width-label = Вес: { $weight }кг
+humanoid-profile-editor-slider-reset = Сбросить
 trait-category-disabilities = Ограничения
 trait-category-speech = Черты речи
 trait-category-quirks = Причуды
@@ -69,13 +73,11 @@ humanoid-profile-editor-clear-all-traits-button = Сбросить все чер
 trait-category-physical = Физические
 expand-all-trait-button = Показать все
 collapse-all-trait-button = Скрыть
-humanoid-profile-editor-width-label = Ширина:
 
 # Mono End
 
 humanoid-profile-editor-traits-default-category = Без категории
 humanoid-profile-editor-clear-all-traits-confirm = Подтвердить сброс
-humanoid-profile-editor-height-label = Рост:
 humanoid-profile-editor-company-tab = Компания
 humanoid-profile-editor-company-label = Компания:
 humanoid-profile-editor-company-none = Нет

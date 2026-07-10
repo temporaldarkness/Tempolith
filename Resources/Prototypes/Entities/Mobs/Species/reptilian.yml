@@ -5,6 +5,7 @@
   id: BaseMobReptilian
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: HumanoidAppearance
     species: Reptilian
     hideLayersOnEquip:

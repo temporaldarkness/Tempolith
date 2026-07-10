@@ -1,7 +1,7 @@
 - type: species
   id: Skeleton
   name: species-name-skeleton
-  roundStart: false
+  roundStart: true
   prototype: MobSkeletonPerson
   sprites: MobSkeletonSprites
   defaultSkinTone: "#fff9e2"
@@ -44,6 +44,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobSkeletonHeadFutanari
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobSkeletonTorso
   baseSprite:
     sprite: Mobs/Species/Skeleton/parts.rsi
@@ -57,6 +63,12 @@
 
 - type: humanoidBaseSprite
   id: MobSkeletonTorsoFemale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobSkeletonTorsoFutanari
   baseSprite:
     sprite: Mobs/Species/Skeleton/parts.rsi
     state: torso_f

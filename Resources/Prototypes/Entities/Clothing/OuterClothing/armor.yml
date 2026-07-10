@@ -25,6 +25,9 @@
     damageCoefficient: 0.90
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.4
+  - type: Tag
+    tags:
+    - NudeBottom
 
 #Standard armor vest, allowed for security and bartenders
 - type: entity
@@ -47,6 +50,9 @@
     sprite: Clothing/OuterClothing/Armor/security_slim.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/security_slim.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, ClothingOuterRadioSlot] # Exodus-Armor-Tweak-Radio
@@ -99,6 +105,7 @@
   - type: Tag  # Mono
     tags:
     - Kevlar
+    - NudeBottom
 
 - type: entity
   parent: [ ClothingOuterArmorBase, ClothingOuterRadioSlot ] # Exodus-Armor-Tweak-Radio
@@ -123,6 +130,9 @@
       - Energy
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.5
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing ]
@@ -327,6 +337,7 @@
   - type: Tag  # Mono
     tags:
     - Kevlar
+    - NudeBottom
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, AllowSuitStorageClothing ]

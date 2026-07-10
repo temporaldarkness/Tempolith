@@ -40,3 +40,14 @@
     - Scarf
     - ClothMade
     - WhitelistChameleon
+
+- type: entity
+  abstract: true
+  parent: ClothingNeckBase
+  id: ClothingCloakBase
+  components:
+  - type: Tag
+    tags:
+    - OpenNeck
+    - ClothMade
+    - WhitelistChameleon

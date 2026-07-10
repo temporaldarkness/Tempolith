@@ -1,7 +1,7 @@
 - type: species
   id: Rodentia
   name: species-name-rodentia
-  roundStart: false # Exodus
+  roundStart: true # Exodus
   prototype: MobRodentia
   sprites: MobRodentiaSprites
   defaultSkinTone: "#747474"
@@ -86,6 +86,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobRodentiaHeadFutanari
+  baseSprite:
+    sprite: _DV/Mobs/Species/Rodentia/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobRodentiaTorso
   baseSprite:
     sprite: _DV/Mobs/Species/Rodentia/parts.rsi
@@ -99,6 +105,12 @@
 
 - type: humanoidBaseSprite
   id: MobRodentiaTorsoFemale
+  baseSprite:
+    sprite: _DV/Mobs/Species/Rodentia/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobRodentiaTorsoFutanari
   baseSprite:
     sprite: _DV/Mobs/Species/Rodentia/parts.rsi
     state: torso_f

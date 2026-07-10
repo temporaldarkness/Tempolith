@@ -1,7 +1,7 @@
 - type: species
   id: Yowie
   name: species-name-yowie
-  roundStart: false
+  roundStart: true
   prototype: MobYowie
   sprites: MobYowieSprites
   markingLimits: MobHumanMarkingLimits
@@ -97,6 +97,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobYowieHeadFutanari
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Yowie/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobYowieTorso
   baseSprite:
     sprite: _Goobstation/Mobs/Species/Yowie/parts.rsi
@@ -110,6 +116,12 @@
 
 - type: humanoidBaseSprite
   id: MobYowieTorsoFemale
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Yowie/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobYowieTorsoFutanari
   baseSprite:
     sprite: _Goobstation/Mobs/Species/Yowie/parts.rsi
     state: torso_f

@@ -10,6 +10,9 @@
   maleFirstNames: NamesTajaranFirst
   femaleFirstNames: NamesTajaranFirst
   lastNames: NamesTajaranLast
+  youngAge: 23
+  oldAge: 46
+  maxAge: 49
 
 
 - type: markingPoints
@@ -86,6 +89,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobTajaranHeadFutanari
+  baseSprite:
+    sprite: _Exodus/Mobs/Species/Tajaran/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobTajaranTorso
   baseSprite:
     sprite: _Exodus/Mobs/Species/Tajaran/parts.rsi
@@ -99,6 +108,12 @@
 
 - type: humanoidBaseSprite
   id: MobTajaranTorsoFemale
+  baseSprite:
+    sprite: _Exodus/Mobs/Species/Tajaran/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobTajaranTorsoFutanari
   baseSprite:
     sprite: _Exodus/Mobs/Species/Tajaran/parts.rsi
     state: torso_f

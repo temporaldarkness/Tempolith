@@ -503,4 +503,6 @@ public enum LogType
     /// </summary>
     SavingsTransfer = 106,
     // Exodus-End
+
+    Interactions  = 107, // Interaction Panel Edit
 }

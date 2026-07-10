@@ -1,7 +1,7 @@
 - type: species
   id: Asakim
   name: species-name-asakim
-  roundStart: false # sad...
+  roundStart: true # sad...
   prototype: MobAsakim
   sprites: MobAsakimSprites
   dollPrototype: MobAsakimDummy
@@ -56,6 +56,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobAsakimHeadFutanari
+  baseSprite:
+    sprite: _Mono/Mobs/Species/Asakim/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobAsakimTorso
   baseSprite:
     sprite: _Mono/Mobs/Species/Asakim/parts.rsi
@@ -69,6 +75,12 @@
 
 - type: humanoidBaseSprite
   id: MobAsakimTorsoFemale
+  baseSprite:
+    sprite: _Mono/Mobs/Species/Asakim/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobAsakimTorsoFutanari
   baseSprite:
     sprite: _Mono/Mobs/Species/Asakim/parts.rsi
     state: torso_f

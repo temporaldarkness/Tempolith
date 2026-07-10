@@ -1,7 +1,7 @@
 - type: species
   id: Harpy
   name: species-name-harpy
-  roundStart: false # Exodus
+  roundStart: true # Exodus
   prototype: MobHarpy
   sprites: MobHarpySprites
   markingLimits: MobHarpyMarkingLimits
@@ -79,10 +79,16 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobHarpyHeadFutanari
+  baseSprite:
+    sprite: _DV/Mobs/Species/Harpy/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobHarpyTorso
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
-    state: torso_m
+    state: torso_u
 
 - type: humanoidBaseSprite
   id: MobHarpyTorsoMale
@@ -95,6 +101,12 @@
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobHarpyTorsoFutanari
+  baseSprite:
+    sprite: _DV/Mobs/Species/Harpy/parts.rsi
+    state: torso_h
 
 - type: humanoidBaseSprite
   id: MobHarpyLLeg

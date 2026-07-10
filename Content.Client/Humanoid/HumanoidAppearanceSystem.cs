@@ -33,6 +33,9 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
         UpdateLayers(component, sprite);
         ApplyMarkingSet(component, sprite);
 
+        var scale = new Vector2(component.Width, component.Height);
+        _spriteSystem.SetScale(component.Owner, scale);
+
         sprite[sprite.LayerMapReserveBlank(HumanoidVisualLayers.Eyes)].Color = component.EyeColor;
     }
 
@@ -92,9 +95,19 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
 
         if (sexMorph)
             protoId = HumanoidVisualLayersExtension.GetSexMorph(key, component.Sex, protoId);
-
+        /*
         var proto = _prototypeManager.Index<HumanoidSpeciesSpriteLayer>(protoId);
         component.BaseLayers[key] = proto;
+        */
+
+        // Tempolith new genders change start
+        if (_prototypeManager.TryIndex(protoId, out HumanoidSpeciesSpriteLayer? proto))
+            component.BaseLayers[key] = proto;
+
+        if (proto == null)
+            return;
+        // Tempolith new genders change end
+
 
         if (proto.MatchSkin && !overrideSkin) // Shitmed Change
             layer.Color = component.SkinColor.WithAlpha(proto.LayerAlpha);
@@ -204,6 +217,8 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
         humanoid.Species = profile.Species;
         humanoid.SkinColor = profile.Appearance.SkinColor;
         humanoid.EyeColor = profile.Appearance.EyeColor;
+        humanoid.Width = profile.Appearance.Width;
+        humanoid.Height = profile.Appearance.Height;
 
         UpdateSprite(humanoid, Comp<SpriteComponent>(uid));
     }

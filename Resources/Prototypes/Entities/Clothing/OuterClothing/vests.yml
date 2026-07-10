@@ -20,6 +20,9 @@
     damageCoefficient: 0.9
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.3
+  - type: Tag
+    tags:
+    - NudeBottom
 
 #Mercenary web vest
 - type: entity
@@ -44,6 +47,9 @@
     damageCoefficient: 0.90
   - type: StaminaDamageResistance # Mono - Stamres
     coefficient: 0.4
+  - type: Tag
+    tags:
+    - NudeBottom
 
 #Detective's vest
 - type: entity
@@ -56,6 +62,9 @@
     sprite: Clothing/OuterClothing/Vests/detvest.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/detvest.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 #Hazard vest
 - type: entity
@@ -80,6 +89,7 @@
   - type: Tag
     tags:
     - HiViz
+    - NudeBottom
 
 #(Bartender) vest
 - type: entity
@@ -92,6 +102,9 @@
     sprite: Clothing/OuterClothing/Vests/vest.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/vest.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 #Tank Harness
 - type: entity
@@ -104,3 +117,6 @@
     sprite: Clothing/OuterClothing/Vests/tankharness.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/tankharness.rsi
+  - type: Tag
+    tags:
+    - NudeBottom

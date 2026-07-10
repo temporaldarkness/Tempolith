@@ -5,6 +5,7 @@
   id: BaseMobRodentia
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: HumanoidAppearance
     species: Rodentia
   - type: Thirst

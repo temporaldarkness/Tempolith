@@ -16,6 +16,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - TopCovered
   - type: HideLayerClothing
     slots:
     - HeadTop
@@ -44,6 +45,7 @@
     tags:
     - WhitelistChameleon
     - SecurityHelmet
+    - TopCovered
 
 #Mercenary Helmet
 - type: entity
@@ -79,6 +81,9 @@
         Caustic: 0.95
   - type: ExplosionResistance
     damageCoefficient: 0.75
+  - type: Tag
+    tags:
+    - FullCovered
 
 #Syndicate SWAT Helmet
 - type: entity
@@ -111,6 +116,11 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.95
+  - type: Tag
+    tags:
+    - FullCovered
+    - WhitelistChameleon
+    - SecurityHelmet
 
 #Bombsuit Helmet
 - type: entity
@@ -138,6 +148,9 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: Tag
+    tags:
+    - FullCovered
 
 #Janitorial Bombsuit Helmet
 - type: entity
@@ -171,6 +184,9 @@
         Slash: 0.8
         Piercing: 0.9
         Heat: 0.9
+  - type: Tag
+    tags:
+    - FullCovered
 
 #Space Ninja Helmet
 - type: entity
@@ -186,6 +202,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FullCovered
   - type: IngestionBlocker
   - type: IdentityBlocker
   - type: HideLayerClothing
@@ -208,6 +225,9 @@
     sprite: Clothing/Head/Helmets/templar.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - FullCovered
 
 #Thunderdome Helmet
 - type: entity
@@ -220,6 +240,9 @@
     sprite: Clothing/Head/Helmets/thunderdome.rsi
   - type: Clothing
     sprite: Clothing/Head/Helmets/thunderdome.rsi
+  - type: Tag
+    tags:
+    - FullCovered
 
 #Wizard Helmet
 - type: entity
@@ -234,6 +257,9 @@
     sprite: Clothing/Head/Helmets/wizardhelm.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - FullCovered
 
 #Fire Helmet
 - type: entity
@@ -258,6 +284,7 @@
     tags:
     - WhitelistChameleon
     - FireHelmet
+    - FullCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -291,6 +318,7 @@
     tags:
     - WhitelistChameleon
     - FireHelmet
+    - FullCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -317,6 +345,9 @@
         Slash: 0.5
         Piercing: 0.5
         Heat: 0.9
+  - type: Tag
+    tags:
+    - FullCovered
 
 #ERT HELMETS
 #ERT Leader Helmet

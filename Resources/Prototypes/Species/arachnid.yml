@@ -11,8 +11,6 @@
   maleFirstNames: NamesArachnidFirst
   femaleFirstNames: NamesArachnidFirst
   lastNames: NamesArachnidLast
-  sexes:
-  - Unsexed
 
 - type: speciesBaseSprites
   id: MobArachnidSprites
@@ -89,6 +87,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobArachnidHeadFutanari
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobArachnidTorso
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
@@ -102,6 +106,12 @@
 
 - type: humanoidBaseSprite
   id: MobArachnidTorsoFemale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobArachnidTorsoFutanari
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: torso_f

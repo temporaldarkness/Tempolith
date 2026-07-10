@@ -84,6 +84,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobReptilianHeadFutanari
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobReptilianTorso
   baseSprite:
     sprite: Mobs/Species/Reptilian/parts.rsi
@@ -97,6 +103,12 @@
 
 - type: humanoidBaseSprite
   id: MobReptilianTorsoFemale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobReptilianTorsoFutanari
   baseSprite:
     sprite: Mobs/Species/Reptilian/parts.rsi
     state: torso_f

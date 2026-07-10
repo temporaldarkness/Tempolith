@@ -1178,6 +1178,43 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.ToTable("profile", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.ProfileErp", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("profile_erp_id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AnalVirginity")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("anal_virginity");
+
+                    b.Property<string>("Erp")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("erp");
+
+                    b.Property<int>("ProfileId")
+                        .HasColumnType("integer")
+                        .HasColumnName("profile_id");
+
+                    b.Property<string>("Virginity")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("virginity");
+
+                    b.HasKey("Id")
+                        .HasName("PK_profile_erp");
+
+                    b.HasIndex("ProfileId")
+                        .IsUnique();
+
+                    b.ToTable("profile_erp", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.ProfileLoadout", b =>
                 {
                     b.Property<int>("Id")
@@ -1940,6 +1977,18 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Navigation("Preference");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.ProfileErp", b =>
+                {
+                    b.HasOne("Content.Server.Database.Profile", "Profile")
+                        .WithOne("ErpData")
+                        .HasForeignKey("Content.Server.Database.ProfileErp", "ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_profile_erp_profile_profile_id");
+
+                    b.Navigation("Profile");
+                });
+
             modelBuilder.Entity("Content.Server.Database.ProfileLoadout", b =>
                 {
                     b.HasOne("Content.Server.Database.ProfileLoadoutGroup", "ProfileLoadoutGroup")
@@ -2147,6 +2196,8 @@ namespace Content.Server.Database.Migrations.Postgres
             modelBuilder.Entity("Content.Server.Database.Profile", b =>
                 {
                     b.Navigation("Antags");
+
+                    b.Navigation("ErpData");
 
                     b.Navigation("Jobs");
 

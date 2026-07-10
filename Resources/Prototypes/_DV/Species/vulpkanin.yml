@@ -82,10 +82,16 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobVulpkaninHeadFutanari
+  baseSprite:
+    sprite: _DV/Mobs/Species/Vulpkanin/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobVulpkaninTorso
   baseSprite:
     sprite: _DV/Mobs/Species/Vulpkanin/parts.rsi
-    state: torso_m
+    state: torso_u
 
 - type: humanoidBaseSprite
   id: MobVulpkaninTorsoMale
@@ -98,6 +104,12 @@
   baseSprite:
     sprite: _DV/Mobs/Species/Vulpkanin/parts.rsi
     state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobVulpkaninTorsoFutanari
+  baseSprite:
+    sprite: _DV/Mobs/Species/Vulpkanin/parts.rsi
+    state: torso_h
 
 - type: humanoidBaseSprite
   id: MobVulpkaninLLeg

@@ -4,6 +4,7 @@
   id: MobGoblinBase
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: Sprite
     scale: 0.8, 0.7
   - type: HumanoidAppearance

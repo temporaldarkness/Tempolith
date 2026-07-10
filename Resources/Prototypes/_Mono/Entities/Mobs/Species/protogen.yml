@@ -4,6 +4,7 @@
   name: Urist McHardDrive
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: HarpySinger # Mono
   - type: Instrument # Mono
     allowPercussion: true

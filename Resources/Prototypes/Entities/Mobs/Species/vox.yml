@@ -3,6 +3,7 @@
   id: BaseMobVox
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: Hunger
   - type: Thirst
   - type: Icon
@@ -159,7 +160,7 @@
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
             state: shoes
-      outerClothing: # Goob 
+      outerClothing: # Goob
         sizeMaps:
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
@@ -216,7 +217,7 @@
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
             state: shoes
-      outerClothing: # Goob 
+      outerClothing: # Goob
         sizeMaps:
           32:
             sprite: Mobs/Species/Vox/displacement.rsi

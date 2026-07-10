@@ -85,6 +85,24 @@
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="SexButton" HorizontalAlignment="Right" />
                                 </BoxContainer>
+                                <!-- Erp -->
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Text="{Loc 'humanoid-profile-editor-erp-label'}"/>
+                                    <Control HorizontalExpand="True"/>
+                                    <OptionButton Name="ErpButton" HorizontalAlignment="Right"/>
+                                </BoxContainer>
+                                <!-- Virginity -->
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Text="{Loc 'humanoid-profile-editor-virginity-label'}"/>
+                                    <Control HorizontalExpand="True"/>
+                                    <OptionButton Name="VirginityButton" HorizontalAlignment="Right"/>
+                                </BoxContainer>
+                                <!-- Anal Virginity -->
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Text="{Loc 'humanoid-profile-editor-anal-virginity-label'}"/>
+                                    <Control HorizontalExpand="True"/>
+                                    <OptionButton Name="AnalVirginityButton" HorizontalAlignment="Right"/>
+                                </BoxContainer>
                                 <!-- Pronouns -->
                                 <BoxContainer HorizontalExpand="True">
                                     <Label Text="{Loc 'humanoid-profile-editor-pronouns-label'}" />
@@ -92,12 +110,14 @@
                                     <OptionButton Name="PronounsButton" HorizontalAlignment="Right" />
                                 </BoxContainer>
                                 <!-- Corvax-TTS-Start -->
+                                <!--
                                 <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
                                     <Label Text="{Loc 'humanoid-profile-editor-voice-label'}" />
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="CVoiceButton" HorizontalAlignment="Right" />
                                     <Button Name="CVoicePlayButton" Text="{Loc 'humanoid-profile-editor-voice-play'}" MaxWidth="80" HorizontalAlignment="Right"/>
                                 </BoxContainer>
+                                -->
                                 <!-- Corvax-TTS-End -->
                                 <!-- Show clothing -->
                                 <BoxContainer HorizontalExpand="True">
@@ -110,6 +130,19 @@
                                     <Label Text="{Loc 'humanoid-profile-editor-spawn-priority-label'}" />
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="SpawnPriorityButton" HorizontalAlignment="Right" />
+                                </BoxContainer>
+                            </BoxContainer>
+                            <!-- SUNRISE - Species Size -->
+                            <BoxContainer Margin="10" HorizontalExpand="True" Orientation="Vertical">
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label SetWidth="150" Name="HeightDescribeLabel" Margin="5 0 10 0" />
+                                    <Slider Name="HeightSlider" MinValue="0.5" Value="1" MaxValue="1.5" HorizontalExpand="True" Margin="10 0 5 0" />
+                                    <Button Name="HeightResetButton" Text="{Loc 'humanoid-profile-editor-slider-reset'}" />
+                                </BoxContainer>
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label SetWidth="150" Name="WidthDescribeLabel" Margin="5 0 10 0" />
+                                    <Slider Name="WidthSlider" MinValue="0.5" Value="1" MaxValue="1.5" HorizontalExpand="True" Margin="10 0 5 0" />
+                                    <Button Name="WidthResetButton" Text="{Loc 'humanoid-profile-editor-slider-reset'}" />
                                 </BoxContainer>
                             </BoxContainer>
                             <!-- Skin -->

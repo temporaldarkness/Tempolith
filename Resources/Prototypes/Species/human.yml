@@ -99,10 +99,16 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobHumanHeadFutanari
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobHumanTorso
   baseSprite:
     sprite: Mobs/Species/Human/parts.rsi
-    state: torso_m
+    state: torso_u
 
 - type: humanoidBaseSprite
   id: MobHumanTorsoMale
@@ -115,6 +121,12 @@
   baseSprite:
     sprite: Mobs/Species/Human/parts.rsi
     state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobHumanTorsoFutanari
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: torso_h
 
 - type: humanoidBaseSprite
   id: MobHumanLLeg

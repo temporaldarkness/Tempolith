@@ -2,7 +2,7 @@
 - type: species
   id: Goblin
   name: species-name-goblin
-  roundStart: false # Exodus
+  roundStart: true # Exodus
   prototype: MobGoblin
   sprites: MobGoblinSprites
   markingLimits: MobGoblinMarkingLimits
@@ -85,10 +85,16 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobGoblinHeadFutanari
+  baseSprite:
+    sprite: _NF/Mobs/Species/Goblin/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobGoblinTorso
   baseSprite:
     sprite: _NF/Mobs/Species/Goblin/parts.rsi
-    state: torso_m
+    state: torso_u
 
 - type: humanoidBaseSprite
   id: MobGoblinTorsoMale
@@ -101,6 +107,12 @@
   baseSprite:
     sprite: _NF/Mobs/Species/Goblin/parts.rsi
     state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobGoblinTorsoFutanari
+  baseSprite:
+    sprite: _NF/Mobs/Species/Goblin/parts.rsi
+    state: torso_h
 
 - type: humanoidBaseSprite
   id: MobGoblinLLeg

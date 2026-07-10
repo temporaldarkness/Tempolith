@@ -14,6 +14,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FullCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -87,7 +88,7 @@
     sprite: Clothing/Head/Hoods/Bio/virology.rsi
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadTopCovered
   id: ClothingHeadHatHoodChaplainHood
   categories: [ HideSpawnMenu ]
   name: chaplain's hood
@@ -101,12 +102,13 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+    - TopCovered
   - type: HideLayerClothing
     slots:
     - Hair
 
 - type: entity
-  parent: [ClothingHeadBase]
+  parent: [ClothingHeadTopCovered]
   id: ClothingHeadHatHoodCulthood
   name: cult hood
   description: There's no cult without cult hoods.
@@ -123,7 +125,7 @@
     - Hair
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadTopCovered
   id: ClothingHeadHatHoodNunHood
   name: nun hood
   description: Maximum piety in this star system.
@@ -163,9 +165,12 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: Tag
+    tags:
+    - FullCovered
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadTopCovered
   id: ClothingHeadHatHoodGoliathCloak
   name: goliath cloak hood
   description: A hood of a goliath cloak, it is made from the hide of resilient fauna from a distant planet.
@@ -182,7 +187,7 @@
     - Hair
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadTopCovered
   id: ClothingHeadHatHoodIan
   categories: [ HideSpawnMenu ]
   name: ian hood
@@ -197,7 +202,7 @@
     - Hair
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadTopCovered
   id: ClothingHeadHatHoodCarp
   categories: [ HideSpawnMenu ]
   name: carp hood
@@ -242,6 +247,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FullCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -748,7 +754,7 @@
       - state: winterbits-equipped-HELMET
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadTopCovered
   id: ClothingHeadHatHoodVoidCloak
   name: void cloak hood
   description: The hood of a void cloak. For those who have gone to the dark side of the force.

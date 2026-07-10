@@ -4,6 +4,7 @@
   id: BaseMobResomi
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
    # Einstein Engines - Start - Language
   - type: LanguageKnowledge
     speaks:

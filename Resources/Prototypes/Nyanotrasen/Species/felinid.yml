@@ -11,6 +11,18 @@
   femaleFirstNames: NamesFelinidFirstFemale # Exodus-felinid-names
   lastNames: NamesFelinidLast # Exodus-felinid-names
   naming: FirstLast # Exodus-felinid-names
+  minAge: 18
+  youngAge: 18
+  oldAge: 30
+  maxAge: 60
+  defaultHeight: 0.8
+  defaultWidth: 0.8
+  maxHeight: 1
+  maxWidth: 1
+  minHeight: 0.8
+  minWidth: 0.8
+  minHeightCm: 130
+  maxHeightCm: 190
 
 - type: markingPoints
   id: MobFelinidMarkingLimits

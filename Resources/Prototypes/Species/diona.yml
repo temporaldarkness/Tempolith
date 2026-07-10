@@ -82,6 +82,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobDionaHeadFutanari
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobDionaTorso
   baseSprite:
     sprite: Mobs/Species/Diona/parts.rsi
@@ -95,6 +101,12 @@
 
 - type: humanoidBaseSprite
   id: MobDionaTorsoFemale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobDionaTorsoFutanari
   baseSprite:
     sprite: Mobs/Species/Diona/parts.rsi
     state: torso_f

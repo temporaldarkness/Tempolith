@@ -216,6 +216,36 @@ namespace Content.Client.Lobby.UI
 
             #endregion Sex
 
+            #region Erp
+
+            ErpButton.OnItemSelected += args =>
+            {
+                ErpButton.SelectId(args.Id);
+                SetErp((Erp)args.Id);
+            };
+
+            #endregion Erp
+
+            #region Virginity
+
+            VirginityButton.OnItemSelected += args =>
+            {
+                VirginityButton.SelectId(args.Id);
+                SetVirginity((Virginity)args.Id);
+            };
+
+            #endregion Virginity
+
+            #region AnalVirginity
+
+            AnalVirginityButton.OnItemSelected += args =>
+            {
+                AnalVirginityButton.SelectId(args.Id);
+                SetAnalVirginity((Virginity)args.Id);
+            };
+
+            #endregion AnalVirginity
+
             #region Age
 
             AgeEdit.OnTextChanged += args =>
@@ -244,11 +274,6 @@ namespace Content.Client.Lobby.UI
             #endregion Gender
 
             RefreshSpecies();
-
-            // Corvax-TTS-Start
-            InitializeVoice();
-            // Corvax-TTS-End
-
             SpeciesButton.OnItemSelected += args =>
             {
                 SpeciesButton.SelectId(args.Id);
@@ -272,6 +297,61 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion
+
+            #region Size
+
+            UpdateSizeControls();
+
+            WidthSlider.OnValueChanged += args =>
+            {
+                UpdateSizeText();
+            };
+
+            HeightSlider.OnValueChanged += args =>
+            {
+                UpdateSizeText();
+            };
+
+            WidthSlider.OnReleased += args =>
+            {
+                SetWidth(args.Value);
+            };
+
+            HeightSlider.OnReleased += args =>
+            {
+                SetHeight(args.Value);
+            };
+
+            WidthResetButton.OnPressed += _ =>
+            {
+
+                if (Profile is null)
+                {
+                    return;
+                }
+
+                if (_prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var speciesPrototype))
+                {
+                    WidthSlider.Value = speciesPrototype.DefaultWidth;
+                }
+
+            };
+
+            HeightResetButton.OnPressed += _ =>
+            {
+
+                if (Profile is null)
+                {
+                    return;
+                }
+
+                if (_prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var speciesPrototype))
+                {
+                    WidthSlider.Value = speciesPrototype.DefaultHeight;
+                }
+
+            };
+            #endregion Size
 
             #region Hair
 
@@ -1187,14 +1267,17 @@ namespace Content.Client.Lobby.UI
             UpdateNameEdit();
             UpdateFlavorTextEdit();
             UpdateSexControls();
+            UpdateErpControls();
+            UpdateVirginityControls();
+            UpdateAnalVirginityControls();
             UpdateGenderControls();
+            UpdateSizeControls();
             UpdateSkinColor();
             UpdateSpawnPriorityControls();
             UpdateAgeEdit();
             UpdateEyePickers();
             UpdateSaveButton();
             UpdateMarkings();
-            UpdateTTSVoicesControls(); // Corvax-TTS
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
@@ -1213,6 +1296,70 @@ namespace Content.Client.Lobby.UI
                 PreferenceUnavailableButton.SelectId((int) Profile.PreferenceUnavailable);
             }
         }
+
+        private void UpdateSizeText()
+        {
+
+            if (Profile is null || !_prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var speciesPrototype))
+            {
+                return;
+            }
+
+            var heightRaw = HeightSlider.Value;
+            var weightRaw = WidthSlider.Value;
+
+            var height = ConvertSliderToHeight(
+                sliderValue: heightRaw,
+                minSlider: speciesPrototype.MinHeight,
+                maxSlider: speciesPrototype.MaxHeight,
+                minHeightCm: speciesPrototype.MinHeightCm,
+                maxHeightCm: speciesPrototype.MaxHeightCm
+            );
+
+            var weight = speciesPrototype.StandardWeight + speciesPrototype.StandardDensity * (weightRaw * heightRaw - 1);
+            HeightDescribeLabel.Text = Loc.GetString("humanoid-profile-editor-height-label", ("height", Math.Round(height)));
+            WidthDescribeLabel.Text = Loc.GetString("humanoid-profile-editor-width-label", ("weight", Math.Round(weight)));
+
+
+        }
+
+        private float ConvertSliderToHeight(float sliderValue, float minSlider, float maxSlider, float minHeightCm, float maxHeightCm)
+        {
+            var denom = maxSlider - minSlider;
+            if (MathF.Abs(denom) < 0.0001f)
+                return minHeightCm;
+
+            var normalized = (sliderValue - minSlider) / denom;
+            normalized = MathF.Min(1f, MathF.Max(0f, normalized));
+            return minHeightCm + normalized * (maxHeightCm - minHeightCm);
+        }
+
+        private void SetWidth(float newWidth)
+        {
+            if (Profile is null)
+            {
+                return;
+            }
+
+            Profile.Appearance = Profile.Appearance.WithWidth(newWidth);
+
+            UpdateSizeText();
+            ReloadPreview();
+        }
+
+        private void SetHeight(float newHeight)
+        {
+            if (Profile is null)
+            {
+                return;
+            }
+
+            Profile.Appearance = Profile.Appearance.WithHeight(newHeight);
+
+            UpdateSizeText();
+            ReloadPreview();
+        }
+
 
 
         /// <summary>
@@ -1748,15 +1895,40 @@ namespace Content.Client.Lobby.UI
                 case Sex.Female:
                     Profile = Profile?.WithGender(Gender.Female);
                     break;
+                case Sex.Futanari:
+                    Profile = Profile?.WithGender(Gender.Female);
+                    break;
+                case Sex.Unsexed:
+                    Profile = Profile?.WithGender(Gender.Male);
+                    break;
                 default:
                     Profile = Profile?.WithGender(Gender.Epicene);
                     break;
             }
 
             UpdateGenderControls();
-            UpdateTTSVoicesControls(); // Corvax-TTS
             Markings.SetSex(newSex);
             ReloadPreview();
+        }
+
+
+
+        private void SetErp(Erp newErp)
+        {
+            Profile = Profile?.WithErp(newErp);
+            SetDirty();
+        }
+
+        private void SetVirginity(Virginity newVirginity)
+        {
+            Profile = Profile?.WithVirginity(newVirginity);
+            SetDirty();
+        }
+
+        private void SetAnalVirginity(Virginity newVirginity)
+        {
+            Profile = Profile?.WithAnalVirginity(newVirginity);
+            SetDirty();
         }
 
         private void SetGender(Gender newGender)
@@ -1764,14 +1936,6 @@ namespace Content.Client.Lobby.UI
             Profile = Profile?.WithGender(newGender);
             ReloadPreview();
         }
-
-        // Corvax-TTS-Start
-        private void SetVoice(string newVoice)
-        {
-            Profile = Profile?.WithVoice(newVoice);
-            IsDirty = true;
-        }
-        // Corvax-TTS-End
 
         private void SetSpecies(string newSpecies)
         {
@@ -1787,6 +1951,7 @@ namespace Content.Client.Lobby.UI
             RefreshTraits(); // Frontier
             UpdateSexControls(); // update sex for new species
             UpdateSpeciesGuidebookIcon();
+            UpdateSizeControls();
             ReloadPreview();
         }
 
@@ -1908,6 +2073,99 @@ namespace Content.Client.Lobby.UI
                 SexButton.SelectId((int) Profile.Sex);
             else
                 SexButton.SelectId((int) sexes[0]);
+        }
+
+        private void UpdateSizeControls()
+        {
+            if (Profile is null || !_prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var speciesPrototype))
+            {
+                return;
+            }
+
+            WidthSlider.MinValue = speciesPrototype.MinWidth;
+            WidthSlider.MaxValue = speciesPrototype.MaxWidth;
+            WidthSlider.Value = Profile.Appearance.Width;
+
+            HeightSlider.MinValue = speciesPrototype.MinHeight;
+            HeightSlider.MaxValue = speciesPrototype.MaxHeight;
+            HeightSlider.Value = Profile.Appearance.Height;
+
+            UpdateSizeText();
+        }
+
+
+
+        private void UpdateErpControls()
+        {
+            if (Profile == null)
+                return;
+
+            ErpButton.Clear();
+
+            var erps = new List<Erp>
+            {
+                Erp.Yes,
+                Erp.Ask,
+                Erp.No
+            };
+            // add button for each sex
+            foreach (var sex in erps)
+            {
+                ErpButton.AddItem(Loc.GetString($"humanoid-profile-editor-erp-{sex.ToString().ToLower()}-text"), (int)sex);
+            }
+
+            if (erps.Contains(Profile.Erp))
+                ErpButton.SelectId((int)Profile.Erp);
+            else
+                ErpButton.SelectId((int)erps[2]);
+        }
+
+        private void UpdateVirginityControls()
+        {
+            if (Profile == null)
+                return;
+
+            VirginityButton.Clear();
+
+            var virginities = new List<Virginity>
+            {
+                Virginity.Yes,
+                Virginity.No
+            };
+            // add button for each sex
+            foreach (var sex in virginities)
+            {
+                VirginityButton.AddItem(Loc.GetString($"humanoid-profile-editor-virginity-{sex.ToString().ToLower()}-text"), (int)sex);
+            }
+
+            if (virginities.Contains(Profile.Virginity))
+                VirginityButton.SelectId((int)Profile.Virginity);
+            else
+                VirginityButton.SelectId((int)virginities[0]);
+        }
+
+        private void UpdateAnalVirginityControls()
+        {
+            if (Profile == null)
+                return;
+
+            AnalVirginityButton.Clear();
+
+            var virginities = new List<Virginity>
+            {
+                Virginity.Yes,
+                Virginity.No
+            };
+            // add button for each sex
+            foreach (var sex in virginities)
+            {
+                AnalVirginityButton.AddItem(Loc.GetString($"humanoid-profile-editor-anal-virginity-{sex.ToString().ToLower()}-text"), (int)sex);
+            }
+
+            if (virginities.Contains(Profile.AnalVirginity))
+                AnalVirginityButton.SelectId((int)Profile.AnalVirginity);
+            else
+                AnalVirginityButton.SelectId((int)virginities[0]);
         }
 
         private void UpdateSkinColor()

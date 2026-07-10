@@ -32,6 +32,7 @@ using Content.Client._Mono.Company; // Mono
 using Content.Client._Mono.MonoCoins; // Mono
 using Content.Client._Exodus.Bank; // Exodus
 using Content.Client._Exodus.Decals; // Exodus
+using Content.Client._Sunrise.InteractionsPanel.Models; // Interaction Panel Edit
 
 namespace Content.Client.IoC
 {
@@ -79,6 +80,8 @@ namespace Content.Client.IoC
             collection.Register<JoinQueueManager>(); // Corvax-Queue
             collection.Register<DiscordPlayerInfoManager>(); //SS220 discord user info
             collection.Register<TTSManager>(); // SS220 TTS
+
+            collection.Register<CustomInteractionService, CustomInteractionService>(true); // Interaction Panel Edit
         }
     }
 }

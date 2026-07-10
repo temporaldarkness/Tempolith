@@ -130,6 +130,10 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.TargetRightFoot);
             // Shitmed Change End
             human.AddFunction(ContentKeyFunctions.OfferItem); // CorvaxGoob-OfferItem
+
+            // Interaction Menu Edit
+            human.AddFunction(ContentKeyFunctions.Interact);
+
             human.AddCalculatorKeys(); // Exodus Calculator
 
             // actions should be common (for ghosts, mobs, etc)

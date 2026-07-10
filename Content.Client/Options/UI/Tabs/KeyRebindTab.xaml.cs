@@ -224,6 +224,7 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.OpenOuterClothing);
             // Mono End
             AddButton(ContentKeyFunctions.OpenWallet); // Frontier
+            AddButton(ContentKeyFunctions.Interact); // Interaction Panel Edit
             AddButton(ContentKeyFunctions.ThrowItemInHand);
             AddButton(ContentKeyFunctions.TryPullObject);
             AddButton(ContentKeyFunctions.MovePulledObject);

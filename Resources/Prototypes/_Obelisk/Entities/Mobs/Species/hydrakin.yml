@@ -9,6 +9,7 @@
   id: BaseMobHydrakin
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: UserInterface # Mono
     interfaces:
       enum.HumanoidMarkingModifierKey.Key:

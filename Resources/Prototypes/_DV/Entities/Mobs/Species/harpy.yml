@@ -5,6 +5,7 @@
   id: MobHarpyBase
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: HarpySinger
   - type: Instrument
     allowPercussion: false

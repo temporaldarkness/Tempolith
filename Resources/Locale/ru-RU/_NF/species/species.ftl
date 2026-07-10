@@ -1,3 +1,3 @@
 ## Species Names
 
-species-name-goblin = Goblin
+species-name-goblin = Гоблин

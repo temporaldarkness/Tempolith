@@ -18,7 +18,10 @@
     - state: icon_flipped
       map: ["foldedLayer"]
       visible: false
-      
+  - type: Tag
+    tags:
+    - TopCovered
+
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHeadHatBaseFlipped
@@ -98,7 +101,7 @@
   parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatQMsoft]
   id: ClothingHeadHatQMsoftFlipped
   name: quartermaster's cap
-    
+
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatCorpsoft
@@ -285,7 +288,7 @@
   parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatBizarreSoft]
   id: ClothingHeadHatBizarreSoftFlipped
   name: troublemaker's cap
-    
+
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatParamedicsoft

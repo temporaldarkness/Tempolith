@@ -1,3 +1,4 @@
+﻿using Content.Shared._Lust.ErpStatus;
 using Content.Server.Access.Systems;
 using Content.Server.Humanoid;
 using Content.Server.IdentityManagement;
@@ -18,6 +19,7 @@ using Content.Shared.Random;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Roles;
 using Content.Shared.Station;
+using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 using JetBrains.Annotations;
 using Robust.Shared.Configuration;
 using Robust.Shared.Map;
@@ -322,6 +324,12 @@ public sealed partial class StationSpawningSystem : SharedStationSpawningSystem
             {
                 AddComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;
             }
+
+            EnsureComp<ErpStatusComponent>(entity.Value).Erp = profile.Erp;
+             if (profile.Erp == Erp.No) { EnsureComp<InteractionsComponent>(entity.Value).Erp = false; }
+             EnsureComp<InteractionsComponent>(entity.Value).Virginity = profile.Virginity;
+            EnsureComp<InteractionsComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
+             if (EnsureComp<InteractionsComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
         }
 
         DoJobSpecials(job, entity.Value);

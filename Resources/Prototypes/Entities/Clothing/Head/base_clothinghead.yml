@@ -32,6 +32,17 @@
 - type: entity
   abstract: true
   parent: ClothingHeadBase
+  id: ClothingHeadTopCovered
+  components:
+  - type: Tag
+    tags:
+      - ClothMade
+      - WhitelistChameleon
+      - FullCovered
+
+- type: entity
+  abstract: true
+  parent: ClothingHeadBase
   id: ClothingHeadBaseButcherable
   components:
   - type: Butcherable
@@ -104,6 +115,9 @@
   - type: ContainerContainer
     containers:
       cell_slot: !type:ContainerSlot {}
+  - type: Tag
+    tags:
+    - TopCovered
 
 - type: entity
   abstract: true
@@ -131,6 +145,7 @@
     tags:
     - WhitelistChameleon
     - HelmetEVA
+    - FullCovered
   - type: IdentityBlocker
   - type: HideLayerClothing
     slots:
@@ -176,6 +191,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FullCovered
   - type: IdentityBlocker
   - type: HideLayerClothing
     slots:
@@ -238,6 +254,9 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 2 #recharge of 2 makes total drain 1w / s so max charge is 1:1 with time. Time to fully charge should be 5 minutes. Having recharge gives light an extended flicker period which gives you some warning to return to light area.
+  - type: Tag
+    tags:
+    - FullCovered
 
 - type: entity
   abstract: true
@@ -263,3 +282,6 @@
     - Hair
     - HeadTop
     - HeadSide
+  - type: Tag
+    tags:
+    - TopCovered

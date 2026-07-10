@@ -8,6 +8,9 @@
     sprite: Clothing/OuterClothing/Coats/bomber.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/bomber.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBase]
@@ -25,6 +28,9 @@
     - id: FlippoEngravedLighter
   - type: ExplosionResistance
     damageCoefficient: 1 #its a coat. it doesnt do shit
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterCoatDetectiveLoadout]
@@ -57,6 +63,9 @@
     sprite: Clothing/OuterClothing/Coats/gentlecoat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/gentlecoat.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   abstract: true
@@ -73,6 +82,9 @@
         Caustic: 0.75 # not the full 90% from ss13 because of the head
   - type: ExplosionResistance
     damageCoefficient: 0.65
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   abstract: true
@@ -88,6 +100,9 @@
         Heat: 0.7
   - type: ExplosionResistance
     damageCoefficient: 0.9
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterArmorHoS, ClothingOuterStorageBase]
@@ -99,6 +114,9 @@
     sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageToggleableBase
@@ -113,6 +131,9 @@
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHatHoodChaplainHood
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -140,6 +161,9 @@
         reagents:
         - ReagentId: Fiber
           Quantity: 20
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -155,6 +179,9 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLab]
@@ -175,6 +202,9 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabChem]
@@ -195,6 +225,9 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabViro]
@@ -215,6 +248,9 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabGene]
@@ -237,6 +273,9 @@
         Slash: 0.95
         Heat: 0.95
         Caustic: 0.65
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabCmo]
@@ -257,6 +296,9 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatRnd]
@@ -277,6 +319,9 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatRobo]
@@ -298,6 +343,9 @@
       coefficients:
         Caustic: 0.75
         Radiation: 0.9
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatRD]
@@ -314,6 +362,9 @@
     sprite: Clothing/OuterClothing/Coats/pirate.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/pirate.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterArmorWarden, ClothingOuterStorageBase]
@@ -325,6 +376,9 @@
     sprite: Clothing/OuterClothing/Coats/warden.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/warden.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -336,6 +390,9 @@
     sprite: Clothing/OuterClothing/Coats/damedanecoat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/damedanecoat.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -347,6 +404,9 @@
     sprite: Clothing/OuterClothing/Coats/clownpriest.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/clownpriest.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -364,6 +424,9 @@
         Blunt: 0.8
         Slash: 0.65
         Piercing: 0.85
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -375,6 +438,9 @@
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterStorageBase]
@@ -386,6 +452,9 @@
     sprite: Clothing/OuterClothing/Coats/syndicate/coatsyndiecap.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/syndicate/coatsyndiecap.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: [ClothingOuterCoatHoSTrench]
@@ -397,6 +466,9 @@
     sprite: Clothing/OuterClothing/Coats/syndicate/coatsyndiecaparmored.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/syndicate/coatsyndiecaparmored.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -416,6 +488,9 @@
         Piercing: 0.65
         Heat: 0.85
         Caustic: 0.75
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -431,6 +506,9 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -446,6 +524,9 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -457,6 +538,9 @@
     sprite: Clothing/OuterClothing/Coats/space_asshole.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/space_asshole.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -468,5 +552,8 @@
     sprite: Clothing/OuterClothing/Coats/expensive_coat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/expensive_coat.rsi
+  - type: Tag
+    tags:
+    - NudeBottom
 
 

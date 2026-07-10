@@ -5,6 +5,7 @@
   id: BaseMobAsakim
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: HumanoidAppearance
     species: Asakim
     hideLayersOnEquip:
@@ -122,7 +123,7 @@
   - type: Wagging
   - type: NpcFactionMember
     factions:
-    - AsakimDefenceForces # Exodus-asakim-fix # Making new AI factions is annoying with all the hostilities I have to add, whatever. 
+    - AsakimDefenceForces # Exodus-asakim-fix # Making new AI factions is annoying with all the hostilities I have to add, whatever.
   - type: Inventory
     speciesId: asakim
     # WWDP-Edit-Start

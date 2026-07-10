@@ -4,6 +4,7 @@
   name: Urisst' McKidan
   abstract: true
   components:
+  - type: Interactions # Interactions Panel Edit
   - type: Sprite
     scale: 1.04, 1.04
   - type: HumanoidAppearance

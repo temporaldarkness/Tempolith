@@ -94,6 +94,12 @@
     state: head
 
 - type: humanoidBaseSprite
+  id: MobVoxHeadFutanari
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
   id: MobVoxTorso
   baseSprite:
     sprite: Mobs/Species/Vox/parts.rsi
@@ -107,6 +113,12 @@
 
 - type: humanoidBaseSprite
   id: MobVoxTorsoFemale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobVoxTorsoFutanari
   baseSprite:
     sprite: Mobs/Species/Vox/parts.rsi
     state: torso

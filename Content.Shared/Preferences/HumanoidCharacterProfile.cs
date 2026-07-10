@@ -96,6 +96,15 @@ namespace Content.Shared.Preferences
         public int Age { get; set; } = 18;
 
         [DataField]
+        public Erp Erp { get; set; } = Erp.Ask;
+
+        [DataField]
+        public Virginity Virginity { get; set; } = Virginity.No;
+
+        [DataField]
+        public Virginity AnalVirginity { get; set; } = Virginity.Yes;
+
+        [DataField]
         public Sex Sex { get; private set; } = Sex.Male;
 
         [DataField]
@@ -156,6 +165,9 @@ namespace Content.Shared.Preferences
             string voice, // Corvax-TTS
             int age,
             Sex sex,
+            Erp erp,
+            Virginity virginity,
+            Virginity analVirginity,
             Gender gender,
             int bankBalance,
             HumanoidCharacterAppearance appearance,
@@ -173,6 +185,9 @@ namespace Content.Shared.Preferences
             Voice = voice; // Corvax-TTS
             Age = age;
             Sex = sex;
+            Erp = erp;
+            Virginity = virginity;
+            AnalVirginity = analVirginity;
             Gender = gender;
             BankBalance = bankBalance;
             Appearance = appearance;
@@ -192,7 +207,7 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
-            : this(other.Name, other.FlavorText, other.Species, other.Voice, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
+            : this(other.Name, other.FlavorText, other.Species, other.Voice, other.Age, other.Sex, other.Erp, other.Virginity, other.AnalVirginity, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
                 jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts, other.Company)
         {
         }
@@ -205,6 +220,9 @@ namespace Content.Shared.Preferences
                 other.Voice, // Corvax-TTS
                 other.Age,
                 other.Sex,
+                other.Erp,
+                other.Virginity,
+                other.AnalVirginity,
                 other.Gender,
                 other.BankBalance,
                 other.Appearance.Clone(),
@@ -264,7 +282,12 @@ namespace Content.Shared.Preferences
             var age = 18;
             if (prototypeManager.TryIndex<SpeciesPrototype>(species, out var speciesPrototype))
             {
-                sex = random.Pick(speciesPrototype.Sexes);
+                // Tempolith no Futanari
+                var excluded = speciesPrototype.ExcludeFromRandomSexes ?? Enumerable.Empty<Sex>();
+                var allowedSexes = speciesPrototype.Sexes.Except(excluded).ToList();
+                sex = allowedSexes.Any()
+                    ? random.Pick(allowedSexes)
+                    : random.Pick(speciesPrototype.Sexes);
                 age = random.Next(speciesPrototype.MinAge, speciesPrototype.OldAge); // people don't look and keep making 119 year old characters with zero rp, cap it at middle aged
             }
 
@@ -322,6 +345,21 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithGender(Gender gender)
         {
             return new(this) { Gender = gender };
+        }
+
+        public HumanoidCharacterProfile WithErp(Erp erp)
+        {
+            return new(this) { Erp = erp };
+        }
+
+        public HumanoidCharacterProfile WithVirginity(Virginity virginity)
+        {
+            return new(this) { Virginity = virginity };
+        }
+
+        public HumanoidCharacterProfile WithAnalVirginity(Virginity analVirginity)
+        {
+            return new(this) { AnalVirginity = analVirginity };
         }
 
         // Frontier: this is probably an issue and should be removed.
@@ -526,6 +564,9 @@ namespace Content.Shared.Preferences
             if (Name != other.Name) return false;
             if (Age != other.Age) return false;
             if (Sex != other.Sex) return false;
+            if (Erp != other.Erp) return false;
+            if (Virginity != other.Virginity) return false;
+            if (AnalVirginity != other.AnalVirginity) return false;
             if (Gender != other.Gender) return false;
             if (BankBalance != other.BankBalance) return false;
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
@@ -569,6 +610,7 @@ namespace Content.Shared.Preferences
             {
                 Sex.Male => Sex.Male,
                 Sex.Female => Sex.Female,
+                Sex.Futanari => Sex.Futanari,
                 Sex.Unsexed => Sex.Unsexed,
                 _ => Sex.Male // Invalid enum values.
             };
@@ -831,6 +873,9 @@ namespace Content.Shared.Preferences
             hashCode.Add(Species);
             hashCode.Add(Age);
             hashCode.Add((int)Sex);
+            hashCode.Add((int)Erp);
+            hashCode.Add((int)Virginity);
+            hashCode.Add((int)AnalVirginity);
             hashCode.Add((int)Gender);
             hashCode.Add(Appearance);
             hashCode.Add(BankBalance); // Frontier

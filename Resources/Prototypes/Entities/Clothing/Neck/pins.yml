@@ -11,6 +11,9 @@
     sprite: Clothing/Neck/Misc/pins.rsi
   - type: Clothing
     sprite: Clothing/Neck/Misc/pins.rsi
+  - type: Tag
+    tags:
+    - OpenNeck
 
 - type: entity
   parent: ClothingNeckPinBase

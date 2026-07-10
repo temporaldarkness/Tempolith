@@ -1,7 +1,7 @@
 - type: species
   id: Gingerbread
   name: species-name-gingerbread
-  roundStart: false
+  roundStart: true
   prototype: MobGingerbread
   sprites: MobGingerbreadSprites
   markingLimits: MobHumanMarkingLimits
@@ -51,6 +51,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobGingerbreadHeadFutanari
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobGingerbreadTorso
   baseSprite:
     sprite: Mobs/Species/Gingerbread/parts.rsi
@@ -64,6 +70,12 @@
 
 - type: humanoidBaseSprite
   id: MobGingerbreadTorsoFemale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadTorsoFutanari
   baseSprite:
     sprite: Mobs/Species/Gingerbread/parts.rsi
     state: torso_f

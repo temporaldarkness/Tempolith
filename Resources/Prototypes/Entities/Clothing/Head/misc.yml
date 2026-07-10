@@ -32,6 +32,9 @@
     sprite: Clothing/Head/Misc/chickenhead.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - FullCovered
 
 - type: entity
   parent: ClothingHeadBase
@@ -74,6 +77,9 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+  - type: Tag
+    tags:
+    - FullCovered
 
 - type: entity
   parent: ClothingHeadBase
@@ -109,6 +115,9 @@
     sprite: Clothing/Head/Misc/richard.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - FullCovered
 
 - type: entity
   parent: ClothingHeadBase
@@ -122,6 +131,9 @@
     sprite: Clothing/Head/Misc/skubhead.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - FullCovered
 
 - type: entity
   parent: ClothingHeadBase
@@ -137,9 +149,10 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+    - FullCovered
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadTopCovered
   id: ClothingHeadHatCone
   name: warning cone
   description: This cone is trying to warn you of something!
@@ -157,7 +170,7 @@
     price: 25
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadTopCovered
   id: ClothingHeadHatFancyCrown
   name: fancy crown
   description: It smells like dead rat. Lets you speak like one!
@@ -244,9 +257,12 @@
     sprite: Clothing/Head/Misc/squiddy.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - FullCovered
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadTopCovered
   id: ClothingHeadHatRedRacoon
   name: red racoon hat
   description: Fluffy hat of red racoon!

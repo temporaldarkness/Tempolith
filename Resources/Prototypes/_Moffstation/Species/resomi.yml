@@ -11,6 +11,20 @@
   naming: First
   dollPrototype: MobResomiDummy
   skinColoration: Hues
+  minAge: 26
+  youngAge: 50
+  oldAge: 90
+  maxAge: 140
+  defaultHeight: 1
+  defaultWidth: 1
+  maxHeight: 1.07
+  maxWidth: 1.07
+  minHeight: 0.93
+  minWidth: 0.93
+  minHeightCm: 125
+  maxHeightCm: 165
+  standardWeight: 40
+  standardDensity: 17
 
 - type: speciesBaseSprites
   id: MobResomiSprites
@@ -97,6 +111,12 @@
     state: head_f
 
 - type: humanoidBaseSprite
+  id: MobResomiHeadFutanari
+  baseSprite:
+    sprite: _Moffstation/Mobs/Species/Resomi/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
   id: MobResomiTorso
   baseSprite:
     sprite: _Moffstation/Mobs/Species/Resomi/parts.rsi
@@ -110,6 +130,12 @@
 
 - type: humanoidBaseSprite
   id: MobResomiTorsoFemale
+  baseSprite:
+    sprite: _Moffstation/Mobs/Species/Resomi/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobResomiTorsoFutanari
   baseSprite:
     sprite: _Moffstation/Mobs/Species/Resomi/parts.rsi
     state: torso_f

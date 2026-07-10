@@ -62,6 +62,14 @@
       "directions": 4
     },
     {
+      "name": "torso_h",
+      "directions": 4
+    },
+    {
+      "name": "torso_u",
+      "directions": 4
+    },
+    {
       "name": "overlay_husk",
       "directions": 4
     }

@@ -84,6 +84,12 @@
     state: head
 
 - type: humanoidBaseSprite
+  id: MobKidanHeadFutanari
+  baseSprite:
+    sprite: _Exodus/Mobs/Species/Kidan/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
   id: MobKidanTorso
   baseSprite:
     sprite: _Exodus/Mobs/Species/Kidan/parts.rsi
@@ -97,6 +103,12 @@
 
 - type: humanoidBaseSprite
   id: MobKidanTorsoFemale
+  baseSprite:
+    sprite: _Exodus/Mobs/Species/Kidan/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobKidanTorsoFutanari
   baseSprite:
     sprite: _Exodus/Mobs/Species/Kidan/parts.rsi
     state: torso
